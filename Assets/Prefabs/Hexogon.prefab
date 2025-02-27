@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4681490302116511256}
   - component: {fileID: 8599664398213591485}
   - component: {fileID: 5817756252449064311}
+  - component: {fileID: -3502332286089007665}
+  - component: {fileID: -1746856175764116330}
   m_Layer: 0
   m_Name: Hexogon
   m_TagString: Untagged
@@ -26,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5457287481158755490}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.09, y: 2.9, z: 3.34}
-  m_LocalScale: {x: 100, y: 100, z: 30}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +85,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-3502332286089007665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457287481158755490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aae6e8d89be6da4dbac23a5db22e794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tile_index: 0
+--- !u!64 &-1746856175764116330
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457287481158755490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 1c53aaabf42154848b9a2bb7678b543e, type: 3}
