@@ -25,7 +25,7 @@ public class Tile_generator : MonoBehaviour
 
         //спавн центрального тайла и увеличение индекса тайла, помещение этого тайла в массив
         GameObject new_tile = Instantiate(tile_prefab, zero_tile_pos, quaternion_rotation);
-        new_tile.GetComponent<Tile_script>().Tile_index += 1;
+        new_tile.GetComponent<Tile_script>().Tile_index = Tile_index++;
         map[0] = new_tile;
 
         //установка смещения тайла
@@ -45,12 +45,12 @@ public class Tile_generator : MonoBehaviour
                 //формулы размещения тайлов в зависимости от стороны
                 switch(side)
                 {
-                    case 0: direction = new Vector3(tile_width / 2, 0, tile_width * Mathf.Sqrt(3) / 2); break;
-                    case 1: direction = new Vector3(tile_width, 0, 0); break;
-                    case 2: direction = new Vector3(tile_width / 2, 0, -tile_width * Mathf.Sqrt(3) / 2); break;
-                    case 3: direction = new Vector3(-tile_width / 2, 0, -tile_width * Mathf.Sqrt(3) / 2); break;
-                    case 4: direction = new Vector3(-tile_width, 0, 0); break;
-                    case 5: direction = new Vector3(-tile_width / 2, 0, tile_width * Mathf.Sqrt(3) / 2); break;
+                    case 0: direction = new Vector3(-tile_width / 2, 0, tile_width * Mathf.Sqrt(3) / 2); break;
+                    case 1: direction = new Vector3(-tile_width, 0, 0); break;
+                    case 2: direction = new Vector3(-tile_width / 2, 0, -tile_width * Mathf.Sqrt(3) / 2); break;
+                    case 3: direction = new Vector3(tile_width / 2, 0, -tile_width * Mathf.Sqrt(3) / 2); break;
+                    case 4: direction = new Vector3(tile_width, 0, 0); break;
+                    case 5: direction = new Vector3(tile_width / 2, 0, tile_width * Mathf.Sqrt(3) / 2); break;
                     default: direction = Vector3.zero; break;
                 }
 
@@ -62,7 +62,7 @@ public class Tile_generator : MonoBehaviour
                     new_tile = Instantiate(tile_prefab, tile_pos, quaternion_rotation);
                     new_tile.GetComponent<Tile_script>().Tile_index += 1;
                     Debug.Log(Tile_index);
-                    //map[Tile_index - 1] = new_tile;
+                    map[Tile_index - 1] = new_tile;
                     Debug.Log(map);
                 }
                 slays_pos += direction * i;
